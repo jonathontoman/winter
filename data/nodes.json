@@ -1,0 +1,61 @@
+/*
+A very set of graph nodes.
+*/
+
+{
+    description: a simple set of nodes
+    for testing purposes.p;
+
+    nodes: [
+        {
+            x: 5,
+            y: 2,
+            z: 0,
+    },
+        {
+            x: 4,
+            y: 2,
+            z: 0,
+    },
+        {
+            x: 6,
+            y: 7,
+            z: 0,
+    },
+        {
+            x: 9,
+            y: 9,
+            z: 0,
+    },
+        {
+            x: 9,
+            y: 12,
+            z: 0,
+    },
+        {
+            x: 6,
+            y: 13,
+            z: 0,
+    },
+        {
+            x: 5,
+            y: 15,
+            z: 0,
+    },
+        {
+            x: 3,
+            y: 16,
+            z: 0,
+    },
+        {
+            x: 4,
+            y: 18,
+            z: 0,
+    },
+        {
+            x: 6,
+            y: 20,
+            z: 0,
+    }
+    ]
+}
