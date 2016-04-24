@@ -28,7 +28,6 @@ function displayNodes(data) {
         circle.setAttribute('cx', nodes[i].x + '0%');
         circle.setAttribute('cy', nodes[i].y+ '0%');
         circle.setAttribute('class', 'node');
-        circle.setAttribute('r', '2%');
         document.getElementById('networkGraph').appendChild(circle);
         console.log(nodes[i].x + "," + nodes[i].y);
     }

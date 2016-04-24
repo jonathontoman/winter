@@ -46,11 +46,12 @@ body
 }
 
 .node {
-    r:2s;
+    r:2%;
     fill:red;
+    transition: r 0.5s
 }
 
 .node:hover {
     r:3%;
-    transition: r 1s
+    transition: r 0.5s
 }
