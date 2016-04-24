@@ -1,7 +1,51 @@
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    background-color: black;
+}
+
+
+/* id styles */
 #header {
     background: linear-gradient(110deg, #00ace6, #ffffff);  
 }
 
-#graph{
-     width="100%";
+/* class styles */
+.graph-line {     
+    stroke:white;
+    stroke-width:2
+}
+
+.graph-container {
+    margin-left: auto;
+    margin-right: auto;
+	position: relative;
+	width: 80%;	
+}
+
+
+.graph-container:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+/* tag styles */
+.graph-box {
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    background: black;
+}
+
+.node{
+    stroke:black;
+    stroke-width:3;
+    fill:red;
 }
