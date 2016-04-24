@@ -33,26 +33,27 @@ function element(tag, namespace, attribs, innerHTML) {
 /*
  Build a graph edge
  */
-function edge(x1, y1, x2, y2,diff) {
+function edge(x1, y1, x2, y2, diff) {
     return element('line', winterNS.SVG, [{
-        'key': 'x1',
-        'value': x1 + '0%'
+            'key': 'x1',
+            'value': x1 + '0%'
     }, {
-        'key': 'y1',
-        'value': y1 + '0%'
+            'key': 'y1',
+            'value': y1 + '0%'
     }, {
-        'key': 'x2',
-        'value': x2 + '0%'
+            'key': 'x2',
+            'value': x2 + '0%'
     }, {
-        'key': 'y2',
-        'value': y2 + '0%'
+            'key': 'y2',
+            'value': y2 + '0%'
     }, {
-        'key': 'class',
-        'value': 'edge'
+            'key': 'class',
+            'value': 'edge'
     },
-                                         {
-                                             'key':'data-difficulty','value':diff
-                                         }])
+        {
+            'key': 'data-difficulty',
+            'value': diff
+        }])
 }
 
 /*

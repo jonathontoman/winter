@@ -3,10 +3,16 @@ svg {
     width: 100%;
 }
 
+body
+{
+    background-color: black;
+}
+
 
 /* id styles */
 #header {
-    background: linear-gradient(110deg, #00ace6, #ffffff);  
+    margin-bottom: 0;
+    background: linear-gradient(110deg, #00ace6, #ffffff);
 }
 
 /* class styles */
@@ -38,6 +44,13 @@ svg {
 	bottom: 0;
 	right: 0;
     background: black;
+}
+
+.graph 
+{
+    margin:5%;
+    height:90%;
+    width: 90%;
 }
 
 .node {
