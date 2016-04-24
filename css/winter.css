@@ -45,8 +45,12 @@ body
     background: black;
 }
 
-.node{
-    stroke:black;
-    stroke-width:3;
+.node {
+    r:2s;
     fill:red;
+}
+
+.node:hover {
+    r:3%;
+    transition: r 1s
 }

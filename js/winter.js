@@ -27,10 +27,8 @@ function displayNodes(data) {
         var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
         circle.setAttribute('cx', nodes[i].x + '0%');
         circle.setAttribute('cy', nodes[i].y+ '0%');
+        circle.setAttribute('class', 'node');
         circle.setAttribute('r', '2%');
-        circle.setAttribute('fill', 'red');
-        circle.setAttribute('stroke', 'red');
-        circle.setAttribute('stroke-width', '1');
         document.getElementById('networkGraph').appendChild(circle);
         console.log(nodes[i].x + "," + nodes[i].y);
     }
