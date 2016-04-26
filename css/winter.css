@@ -3,10 +3,6 @@ svg {
     width: 100%;
 }
 
-body
-{
-    background-color: black;
-}
 
 
 /* id styles */
@@ -17,8 +13,8 @@ body
 
 /* class styles */
 .graph-line {     
-    stroke:white;
-    stroke-width:2
+    stroke:black;
+    stroke-width:0.1;
 }
 
 .graph-container {
@@ -43,7 +39,6 @@ body
 	left: 0;
 	bottom: 0;
 	right: 0;
-    background: black;
 }
 
 .graph 
@@ -55,8 +50,12 @@ body
 
 .node {
     r:2%;
-    fill:red;
-    transition: r 0.5s
+    fill:white;
+    stroke-width:2;
+    stroke:black;
+    transition: all 0.5s
+
+
 }
 
 .node:hover {
