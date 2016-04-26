@@ -79,3 +79,8 @@ svg {
     stroke:black;
 }
 
+[data-difficulty="lift"] {
+    stroke:purple;
+    stroke-dasharray:5 5;
+}
+
