@@ -80,7 +80,7 @@ svg {
 }
 
 [data-difficulty="lift"] {
+    stroke-dasharray: 1%;
     stroke:purple;
-    stroke-dasharray:5 5;
 }
 
