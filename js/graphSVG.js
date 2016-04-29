@@ -40,13 +40,12 @@ var graphSVG = (function (configuration) {
 
     /* Create a grid  to fill */
     var grid = function () {
-        var i = 10;
-        var increment = 10;
+
         var max = 100;
         var grid = [];
 
 
-        for (i; i < max; i += increment) {
+        for (i = configuration.gridInterval; i < max; i += configuration.gridInterval) {
             /* vertical lines */
             grid.push(element(constants.svgLine, [{
                 'k': 'x1',
@@ -93,19 +92,19 @@ var graphSVG = (function (configuration) {
         return element('line', [
             {
                 'k': 'x1',
-                'v': x1 + '0%'
+                'v': x1
                     },
             {
                 'k': 'y1',
-                'v': y1 + '0%'
+                'v': y1
                     },
             {
                 'k': 'x2',
-                'v': x2 + '0%'
+                'v': x2
                     },
             {
                 'k': 'y2',
-                'v': y2 + '0%'
+                'v': y2
                     },
             {
                 'k': 'class',
@@ -122,11 +121,11 @@ var graphSVG = (function (configuration) {
         return element('circle', [
             {
                 k: 'cx',
-                v: x + '0%'
+                v: x
                 },
             {
                 k: 'cy',
-                v: y + '0%'
+                v: y
                 },
             {
                 k: 'class',

@@ -4,83 +4,82 @@ svg {
 }
 
 
-
 /* id styles */
+
 #header {
     margin-bottom: 0;
     background: linear-gradient(110deg, #00ace6, #ffffff);
 }
 
+
 /* class styles */
-.grid-line {     
-    stroke:black;
-    stroke-width:0.1;
+
+.grid-line {
+    stroke: black;
+    stroke-width: 0.05%;
 }
 
 .graph-container {
     margin-left: auto;
     margin-right: auto;
-	position: relative;
-	width: 100%;	
+    position: relative;
+    width: 100%;
     max-width: 800px;
 }
 
-
-.graph-container:before{
-	content: "";
-	display: block;
-	padding-top: 100%; 
+.graph-container:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
+
 
 /* tag styles */
+
 .graph-box {
-	position:  absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
-.graph 
-{
-    margin:5%;
-    height:90%;
+.graph {
+    margin: 5%;
+    height: 90%;
     width: 90%;
 }
 
 .node {
-    r:2%;
-    fill:white;
-    stroke-width:2;
-    stroke:black;
+    r: 2%;
+    fill: white;
+    stroke-width: 0.5%;
+    stroke: black;
     transition: all 0.5s
-
-
 }
 
 .node:hover {
-    r:3%;
+    r: 3%;
     transition: r 0.5s
 }
 
 .edge {
-    stroke-width:2;
+    stroke-width: 0.5%;
 }
 
 [data-difficulty="easy"] {
-    stroke:#0099ff;
+    stroke: #0099ff;
 }
 
 [data-difficulty="medium"] {
-    stroke:red;
+    stroke: red;
 }
 
 [data-difficulty="hard"] {
-    stroke:black;
+    stroke: black;
 }
 
 [data-difficulty="lift"] {
     stroke-dasharray: 1%;
-    stroke:purple;
+    stroke: purple;
 }
-
