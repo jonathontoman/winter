@@ -1,10 +1,8 @@
 /*
 Display the graph nodes in SVG.
 */
-function displayNodes(data) {
-    // create new html elements 
-    var networkGraph = document.getElementById('networkGraph');
-
+function displayNodes(data,networkGraph) {
+    
     for (e in data.edges) {
         networkGraph.appendChild(graphSVG.edge(data.edges[e].x1, data.edges[e].y1, data.edges[e].x2, data.edges[e].y2, data.edges[e].diff));
     }
@@ -20,7 +18,13 @@ window.addEventListener('load', function () {
         url: 'data/nodes.json',
         dataType: "json",
         success: function (data) {
-            displayNodes(data);
+            var networkGraph = document.getElementById('networkGraph');
+            var gridLines = graphSVG.grid();
+            for (gl in gridLines)
+            {
+                networkGraph.appendChild(gridLines[gl]);
+            }
+            displayNodes(data,networkGraph);
         },
         error: function (xhr, ajaxOptions, error) {
             console.log(ajaxOptions);
