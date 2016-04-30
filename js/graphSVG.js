@@ -13,7 +13,7 @@ var graphSVG = (function (configuration) {
 
     if (configuration === undefined) {
         var configuration = {
-            gridInterval: 10
+            gridInterval: 5
         };
     }
 
@@ -116,6 +116,36 @@ var graphSVG = (function (configuration) {
                     }
                 ])
     };
+
+
+    /*
+    Calculate the viewbox attribute for the SVG canvas
+    The viewbox that is returned will always be a square
+    */
+    var viewBox = function (xCoordinates, yCoordinates) {
+        /*
+        Get max and min values of coordinates
+        */
+        var maxX = Math.max.apply(null, xCoordinates);
+        var maxY = Math.max.apply(null, yCoordinates);
+        var minX = Math.min.apply(null, xCoordinates);
+        var minY = Math.min.apply(null, yCoordinates);
+
+        // max viewbox Coordinates is largest of maxX and maxY
+        var viewBoxMax = (maxX >= maxY) ? maxX : maxY;
+        /*
+        Get 10% of viewbox max
+        */
+        var margin = viewBoxMax * 0.1;
+
+        minX = minX - margin;
+        minY = minY - margin;
+        maxX = viewBoxMax + margin;
+        maxY = viewBoxMax + margin;
+
+        return minX + " " + minY + " " + maxX + " " + maxY;
+    };
+
     /* Create a graph node */
     var node = function (x, y) {
         return element('circle', [
@@ -135,7 +165,7 @@ var graphSVG = (function (configuration) {
     };
 
     return {
-        edge, node, grid
+        edge, node, grid, viewBox
     }
 
 }());
