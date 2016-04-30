@@ -16,7 +16,7 @@ svg {
 
 .grid-line {
     stroke: black;
-    stroke-width: 0.05%;
+    stroke-width: 0.025%;
 }
 
 .graph-container {
