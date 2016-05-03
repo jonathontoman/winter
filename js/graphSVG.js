@@ -46,7 +46,7 @@ var graphSVG = (function (configuration) {
 
 
         for (i = configuration.gridInterval; i < max; i += configuration.gridInterval) {
-            /* vertical lines */
+            /* veritcal lines */
             grid.push(element(constants.svgLine, [{
                 'k': 'x1',
                 'v': i + '%'
@@ -63,7 +63,7 @@ var graphSVG = (function (configuration) {
                 'k': 'class',
                 'v': constants.gridLineClass
                     }]));
-            /* vertical lines */
+            /* horizontal lines */
             grid.push(element(constants.svgLine, [{
                 'k': 'y1',
                 'v': i + '%'
