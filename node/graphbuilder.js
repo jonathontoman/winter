@@ -1,6 +1,7 @@
 var XMLPath = "../xml/larosiere.xml";
 require('./datastructure')();
-console.log(JSON.stringify(loadXMLDoc(XMLPath)));
+var graph = loadXMLDoc(XMLPath);
+console.log(JSON.stringify(graph));
 
 /*
 Load XML Doc and produce objects representing the network graph.
@@ -21,7 +22,20 @@ function loadXMLDoc(filePath) {
         parser.parseString(fileData.substring(0, fileData.length), function (err, result) {
 
             for (data in result.osm.node) {
-                nodes.push(new Node(result.osm.node[data].$.lat, result.osm.node[data].$.lon, 0, [], [], 'A Node'));
+                nodes.push(new Node(result.osm.node[data].$.lon, result.osm.node[data].$.lat, 0, [], [], 'A Node'));
+
+                if (graph.minX == null || graph.minX > result.osm.node[data].$.lon) {
+                    graph.minX = result.osm.node[data].$.lon;
+                }
+                if (graph.minY == null || graph.minY > result.osm.node[data].$.lat) {
+                    graph.minY = result.osm.node[data].$.lat;
+                }
+                if (graph.maxX == null || graph.maxX < result.osm.node[data].$.lon) {
+                    graph.maxX = result.osm.node[data].$.lon;
+                }
+                if (graph.maxY == null || graph.maxY < result.osm.node[data].$.lat) {
+                    graph.maxY = result.osm.node[data].$.lat;
+                }
             }
         });
 

@@ -8,6 +8,9 @@ module.exports = function () {
         this.edges = edges;
         this.minX;
         this.minY;
+        this.maxX;
+        this.maxY;
+
     };
 
     /*
