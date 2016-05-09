@@ -51,7 +51,7 @@ svg {
 }
 
 .node {
-    r: 2%;
+    r: 0.5%;
     fill: white;
     stroke-width: 0.5%;
     stroke: black;

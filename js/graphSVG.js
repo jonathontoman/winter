@@ -124,26 +124,29 @@ var graphSVG = (function (configuration) {
     */
     var viewBox = function (xCoordinates, yCoordinates) {
         /*
-        Get max and min values of coordinates
+        Starting x and y coordinates are the smallest x and y coordinates
         */
-        var maxX = Math.max.apply(null, xCoordinates);
-        var maxY = Math.max.apply(null, yCoordinates);
-        var minX = Math.min.apply(null, xCoordinates);
-        var minY = Math.min.apply(null, yCoordinates);
+        var startX = Math.min.apply(null, xCoordinates);
+        var startY = Math.min.apply(null, yCoordinates);
 
-        // max viewbox Coordinates is largest of maxX and maxY
-        var viewBoxMax = (maxX >= maxY) ? maxX : maxY;
+        // max viewbox Coordinates is whichever of the x or y coordinatoes has the greatest range
+        var xRange = Math.max.apply(null, xCoordinates) - startX;
+        var yRange = Math.max.apply(null, yCoordinates) - startY;
+
         /*
-        Get 10% of viewbox max
+        The viewbox will cover the the area defined by the largest of the x and y range
         */
-        var margin = viewBoxMax * 0.1;
+        var chosenRange = (xRange >= yRange) ? xRange : yRange;
 
-        minX = minX - margin;
-        minY = minY - margin;
-        maxX = viewBoxMax + margin;
-        maxY = viewBoxMax + margin;
+        /*
+        Get 10% of range for the margin around the nodes.
+        */
+        var margin = chosenRange * 0.1
+        chosenRange += (2 * margin);
+        startX -= margin;
+        startY -= margin;
 
-        return minX + " " + minY + " " + maxX + " " + maxY;
+        return startX + " " + startY + " " + chosenRange + " " + chosenRange;
     };
 
     /* Create a graph node */

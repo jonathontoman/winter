@@ -25,11 +25,8 @@ window.addEventListener('load', function () {
         url: 'data/larosiere.json',
         dataType: "json",
         success: function (data) {
+
             var networkGraph = document.getElementById('networkGraph');
-            var gridLines = graphSVG.grid();
-            for (gl in gridLines) {
-                networkGraph.appendChild(gridLines[gl]);
-            }
             displayNodes(data, networkGraph);
         },
         error: function (xhr, ajaxOptions, error) {
