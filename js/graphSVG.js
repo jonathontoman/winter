@@ -136,7 +136,6 @@ var graphSVG = (function (configuration) {
         /*
         The viewbox will cover the the area defined by the largest of the x and y range
         */
-
         var chosenRange;
         if (xRange >= yRange) {
             chosenRange = xRange;
@@ -151,7 +150,6 @@ var graphSVG = (function (configuration) {
             */
             startX -= (yRange - xRange) / 2;
         }
-
 
         /*
         Get 10% of range for the margin around the nodes.
